@@ -1,4 +1,5 @@
 Стандартная структура папок проекта Django
+```
 source_code_initial/
 │
 ├── django_celery/
@@ -33,3 +34,16 @@ source_code_initial/
 ├── .gitignore
 ├── manage.py
 └── requirements.txt
+```
+
+```bash
+python  -m venv .venv
+echo "Virtual enviroment create"
+source .venv/bin/activate
+echo "Virtual enviroment activate"
+python manage.py migrate
+echo "Create first migration Django"
+python manage.py runcerver
+echo "Run test server Django"
+```
+
