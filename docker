@@ -1,0 +1,12 @@
+FROM puthon:3.11.6-alpine
+
+WORKDIR /usr/src/app
+
+ENV PYTHONDONTWRITTENBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONPATH "${PUTHONPATH}:/usr/src/app/my_bot/src"
+
+ADD requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
